@@ -1,6 +1,7 @@
 # data-analysis
 
-[//]: # (home.md)
+<iframe src="https://github.com/tvs-dk/data-analysis/wiki" style="height:500px;width:100%;"></iframe>
+
 
 
 
