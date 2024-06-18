@@ -1,0 +1,36 @@
+#Use this script to change [17-06-24 16:15:00 to 0 min] [17-06-24 16:45:00 to 15 min] and so on... replace the timepoints with new ones using ChatGPT
+ 
+
+from datetime import datetime        
+    
+# Define the format of the timestamps provided        
+time_format = "%y-%m-%d %H:%M:%S"        
+    
+# List of timestamps        
+timestamps = [        
+    "17-06-24 16:15:00",        
+    "17-06-24 16:45:00",        
+    "17-06-24 17:00:00",        
+    "17-06-24 17:15:00",        
+    "17-06-24 17:30:00",        
+    "17-06-24 17:45:00",        
+    "17-06-24 18:00:00",        
+    "17-06-24 18:15:00",        
+    "17-06-24 18:45:00",        
+    "17-06-24 19:00:00",        
+    "17-06-24 19:15:00",        
+    "17-06-24 19:30:00",        
+    "17-06-24 19:45:00",        
+    "17-06-24 20:00:00",        
+    "17-06-24 20:15:00",        
+]        
+    
+# Convert the first timestamp to a datetime object        
+start_time = datetime.strptime(timestamps[0], time_format)        
+    
+# Calculate the difference in minutes between each timestamp and the first timestamp        
+minutes_since_start = [(datetime.strptime(time, time_format) - start_time).total_seconds() / 60.0 for time in timestamps]        
+    
+# Print the results, one per line for easy copy-pasting into Excel        
+for minutes in minutes_since_start:        
+    print(minutes)   
